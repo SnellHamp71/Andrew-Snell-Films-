@@ -593,3 +593,91 @@ h3{font-size:20px}
     line-height:1.72!important;
   }
 }
+
+
+/* FINAL RESPONSIVE POLISH */
+@media (min-width:1450px){
+  /* Landing page: larger composition on full-screen desktop only */
+  body.landing-page .landing-inner,
+  body.landing-page .landing-wrap,
+  body.landing-page main > div{
+    width:min(1180px,72vw)!important;
+    max-width:none!important;
+  }
+  body.landing-page .landing img,
+  body.landing-page .portrait img,
+  body.landing-page main img{
+    width:auto!important;
+    max-width:min(760px,46vw)!important;
+    max-height:70vh!important;
+  }
+  body.landing-page h1{
+    font-size:54px!important;
+  }
+
+  /* Fractured Worlds + Career Highlights banners:
+     controlled like Training rather than stretched across full viewport */
+  body.fractured-page .hero,
+  body.fractured-page .fw-hero,
+  body.highlights-page .hero,
+  body.highlights-page .highlights-hero{
+    width:min(1120px,calc(100% - 48px))!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    overflow:hidden!important;
+  }
+  body.fractured-page .hero img,
+  body.fractured-page .fw-hero img,
+  body.highlights-page .hero img,
+  body.highlights-page .highlights-hero img{
+    width:100%!important;
+    height:265px!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    display:block!important;
+  }
+}
+
+/* Contact page */
+.contact-page{
+  background:#080808;
+  color:#ddd5c9;
+  min-height:100vh;
+}
+.contact-main{
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:70px 24px;
+}
+.contact-inner{
+  width:min(760px,90vw);
+  text-align:center;
+  border-top:1px solid #332d23;
+  border-bottom:1px solid #332d23;
+  padding:70px 30px;
+}
+.contact-inner .eyebrow{
+  font-size:10px;
+  letter-spacing:.24em;
+  color:#c49a34;
+  margin-bottom:8px;
+}
+.contact-inner h1{
+  font-size:42px;
+  letter-spacing:.12em;
+  color:#c49a34;
+  font-weight:400;
+  margin:0 0 28px;
+}
+.contact-inner p{
+  font-size:16px;
+  line-height:1.65;
+  margin:0 auto 14px;
+  max-width:650px;
+}
+.contact-inner .contact-note{
+  font-size:13px;
+  color:#a79f93;
+}
