@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Film — Andrew Snell</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="video-page">
+<header class="top"><div class="wrap nav">
+<a class="brand" href="home.html">ANDREW SNELL <small>/ DOCUMENTARY FILMMAKER</small></a>
+<nav class="links"><a href="recent-work.html">RECENT WORK</a><a href="films.html">FILMS</a><a href="fractured-worlds.html">FRACTURED WORLDS</a><a href="highlights.html">HIGHLIGHTS &amp; AWARDS</a><a href="biography.html">ABOUT</a><a href="training.html">TRAINING</a></nav>
+</div></header>
+<main class="video-main">
+<div class="video-shell">
+<div class="video-frame"><iframe id="player" title="Andrew Snell film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+<p><a class="video-back" href="javascript:history.back()">← BACK</a></p>
+</div>
+</main>
+<script>
+(function(){
+  const p=new URLSearchParams(location.search);
+  const id=(p.get('v')||'').replace(/[^A-Za-z0-9_-]/g,'');
+  if(id){
+    document.getElementById('player').src='https://www.youtube-nocookie.com/embed/'+id+'?rel=0&modestbranding=1';
+  }
+})();
+</script>
+</body>
+</html>
