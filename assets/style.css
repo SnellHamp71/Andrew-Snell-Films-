@@ -681,3 +681,94 @@ h3{font-size:20px}
   font-size:13px;
   color:#a79f93;
 }
+
+
+/* FULLSCREEN DESKTOP FIX — applies only to wide desktop screens */
+@media (min-width:1450px){
+
+  /* LANDING: substantially larger on fullscreen desktop */
+  body.landing-page .landing-card{
+    width:min(1500px,86vw)!important;
+    grid-template-columns:minmax(430px,.95fr) minmax(650px,1.25fr)!important;
+    gap:90px!important;
+    padding:58px!important;
+  }
+  body.landing-page .landing-card img{
+    width:100%!important;
+    max-height:78vh!important;
+    object-fit:contain!important;
+  }
+  body.landing-page .landing-copy h1{
+    font-size:68px!important;
+    margin-bottom:24px!important;
+  }
+  body.landing-page .landing-copy .goldline{
+    width:78%!important;
+    margin-bottom:66px!important;
+  }
+  body.landing-page .landing-copy p{
+    font-size:16px!important;
+    line-height:2.05!important;
+  }
+  body.landing-page .landing-copy .enter{
+    font-size:15px!important;
+    margin-top:66px!important;
+  }
+
+  /* FRACTURED WORLDS: same controlled header footprint as Training */
+  body.fractured-page .fw-hero{
+    width:min(1120px,calc(100% - 48px))!important;
+    height:265px!important;
+    min-height:265px!important;
+    margin:0 auto!important;
+    background-size:cover!important;
+    background-position:center!important;
+    overflow:hidden!important;
+  }
+  body.fractured-page .fw-hero-inner{
+    padding-top:0!important;
+    height:100%!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:center!important;
+  }
+  body.fractured-page .fw-hero h1{
+    font-size:40px!important;
+  }
+
+  /* CAREER HIGHLIGHTS: same controlled header footprint as Training */
+  body.highlights-page .highlights-hero{
+    width:min(1120px,calc(100% - 48px))!important;
+    height:265px!important;
+    margin:0 auto!important;
+  }
+  body.highlights-page .highlights-hero img{
+    width:100%!important;
+    height:265px!important;
+    object-fit:cover!important;
+    object-position:center!important;
+  }
+  body.highlights-page .highlights-copy{
+    left:42px!important;
+    top:42px!important;
+    width:min(460px,46%)!important;
+  }
+  body.highlights-page .highlights-copy h1{
+    font-size:36px!important;
+    line-height:1.06!important;
+  }
+  body.highlights-page .highlights-copy p{
+    font-size:16px!important;
+    line-height:1.35!important;
+  }
+}
+
+
+/* Internal film player */
+.video-page{background:#080808;color:#ddd5c9;min-height:100vh}
+.video-main{padding:55px 24px 80px}
+.video-shell{width:min(1180px,92vw);margin:auto}
+.video-frame{position:relative;width:100%;aspect-ratio:16/9;background:#000;border:1px solid #3c321f}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-back{display:inline-block;margin-top:18px;color:#c49a34;font-size:11px;letter-spacing:.14em}
