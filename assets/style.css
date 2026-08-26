@@ -786,3 +786,11 @@ h3{font-size:20px}
     object-position:center 28%!important;
   }
 }
+
+
+/* FRACTURED WORLDS — final fullscreen pan upward only */
+@media (min-width:1450px){
+  body.fractured-page .fw-hero{
+    background-position:center 12%!important;
+  }
+}
