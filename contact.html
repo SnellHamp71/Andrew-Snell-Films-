@@ -68,17 +68,17 @@
 
     <p class="intro">For enquiries about films, archive material, screenings, training and consultancy, please get in touch.</p>
 
-    <form class="contact-form">
+   <form class="contact-form" id="contact-form">
       <label for="name">Name</label>
-      <input id="name" name="name" type="text">
+     <input id="name" name="fi-sender-fullName" type="text" required>
 
       <label for="email">Email</label>
-      <input id="email" name="email" type="email">
+    <input id="email" name="fi-sender-email" type="email" required>
 
       <label for="message">Message</label>
-      <textarea id="message" name="message"></textarea>
+    <textarea id="message" name="fi-text-message" required></textarea>
 
-      <button type="button">SEND</button>
+     <button type="submit">SEND</button>
     </form>
   </section>
 </main>
@@ -89,6 +89,25 @@
     <span>ARCHIVE &nbsp;&nbsp; CONTACT</span>
   </div>
 </footer>
+<script src="https://forminit.com/sdk/v1/forminit.js"></script>
+<script>
+  const forminit = new Forminit();
+  const form = document.getElementById('contact-form');
 
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const { data, error } = await forminit.submit('9bo8y3p4d0d', new FormData(form));
+
+    if (error) {
+      alert('Sorry, your message could not be sent. Please try again.');
+      return;
+    }
+
+    alert('Thank you. Your message has been sent.');
+    form.reset();
+  });
+</script>
 </body>
+  
 </html>
