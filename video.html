@@ -21,7 +21,11 @@
 (function(){
   const p=new URLSearchParams(location.search);
   const id=(p.get('v')||'').replace(/[^A-Za-z0-9_-]/g,'');
-  if(id){
+  const vm=(p.get('vm')||'').replace(/[^0-9]/g,'');
+  const h=(p.get('h')||'').replace(/[^A-Za-z0-9]/g,'');
+  if(vm){
+    document.getElementById('player').src='https://player.vimeo.com/video/'+vm+(h?'?h='+h:'');
+  } else if(id){
     document.getElementById('player').src='https://www.youtube-nocookie.com/embed/'+id+'?rel=0&modestbranding=1';
   }
 })();
