@@ -1,7 +1,182 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Andrew Snell Films</title><link rel="stylesheet" href="assets/style.css"></head>
-<body class="landing landing-page"><main class="landing-card">
-<img src="assets/images/landing-portrait.jpg" alt="Andrew Snell">
-<div class="landing-copy"><h1>ANDREW SNELL FILMS</h1><div class="goldline"></div>
-<p>AWARD-WINNING DOCUMENTARY FILMMAKER<br>PRODUCER &nbsp;•&nbsp; SERIES EDITOR</p>
-<a class="enter" href="home.html">ENTER</a></div></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Andrew Snell Films</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background: #000;
+}
+
+.landing-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.42) 0%,
+      rgba(0,0,0,0.12) 34%,
+      rgba(0,0,0,0.20) 55%,
+      rgba(0,0,0,0.66) 100%
+    );
+}
+
+.copy {
+  position: absolute;
+  left: 50%;
+  top: 67%;
+  transform: translate(-50%, -50%);
+  width: min(1000px, 82vw);
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 5.1vw, 82px);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  white-space: nowrap;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: min(600px, 60vw);
+  margin: 30px auto 26px;
+}
+
+.ornament .line {
+  height: 1px;
+  flex: 1;
+  background: rgba(190,137,20,0.70);
+}
+
+.ornament .diamond {
+  width: 8px;
+  height: 8px;
+  background: #c38b13;
+  transform: rotate(45deg);
+  flex: 0 0 auto;
+}
+
+.subtitle {
+  margin: 0;
+  color: #c38b13;
+  font-size: clamp(17px, 1.65vw, 27px);
+  font-weight: 400;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.enter {
+  position: absolute;
+  right: 9%;
+  bottom: 10%;
+  color: #c38b13;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(18px, 1.5vw, 25px);
+  letter-spacing: 0.18em;
+  text-decoration: none;
+}
+
+.enter:hover,
+.enter:focus {
+  color: #e0b24d;
+}
+
+@media (max-width: 760px) {
+  .landing {
+    min-height: 100svh;
+  }
+
+  .landing-photo {
+    object-position: 58% center;
+  }
+
+  .copy {
+    top: 68%;
+    width: 90vw;
+  }
+
+  h1 {
+    font-size: clamp(35px, 9vw, 56px);
+    white-space: normal;
+  }
+
+  .ornament {
+    width: 70vw;
+    margin: 22px auto 20px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  .enter {
+    right: 7%;
+    bottom: 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="landing">
+  <img class="landing-photo" src="A snell - 1 (1).png" alt="Andrew Snell with a film camera">
+
+  <div class="shade"></div>
+
+  <div class="copy">
+    <h1>ANDREW SNELL FILMS</h1>
+
+    <div class="ornament">
+      <span class="line"></span>
+      <span class="diamond"></span>
+      <span class="line"></span>
+    </div>
+
+    <p class="subtitle">Award-Winning Documentary Director · Producer · Series Editor</p>
+  </div>
+
+  <a class="enter" href="home.html">Enter</a>
+</main>
+</body>
+</html>
